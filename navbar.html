@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<title>GestureGuru .</title>
+	<meta name="desciption" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+ 
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script>
+		$(window).on('scroll', function(){
+  			if($(window).scrollTop()){
+  			  $('nav').addClass('black');
+ 			 }else {
+ 		   $('nav').removeClass('black');
+ 		 }
+		})
+	</script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+            <header id="header">
+                <nav>
+                    <div class="logo"><img src="images/icon/logo.png" alt="logo"></div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a class="active" href="#services_section">lessons</a></li>
+                    </ul>
+                    <div class="srch"><input type="text" class="search" placeholder="Search here..."><img src="images/icon/search.png" alt="search" onclick=slide()></div>
+                    <!-- <a class="get-started" href="login.html">Login/Register</a> -->
+                    <img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+                </nav>
+                <div class="head-container">
+                    <div class="quote">
+                        <p>When words falter, hands find voice. A silent ballet of fingers paints emotions, weaving stories where whispers stumble.</p>
+                        <h5>Beyond sound, hearts resonate, building bridges of empathy, brick by graceful, expressive brick. Sign language, a symphony of light and soul, where silence sings loud and clear!</h5>
+                        <div class="play">
+                            <img src="images/icon/play.png" alt="play"><span><a href="https://youtu.be/SapAUtk9DqA?si=I4Oj1TBPPuJF6U9I" target="_blank">Watch Now</a></span>
+                        </div>
+                    </div>
+                    <div class="svg-image">
+                        <img src="images/extra/char.webp" alt="webp">
+                    </div>
+                </div>
+                <div class="side-menu" id="side-menu">
+                    <div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
+                    <div class="user">
+                        <img src="images/creator/roshan.jpeg" alt="Username">
+                        <p>ramjig861</p>
+                    </div>
+                    <ul>
+                        <li><a href="#about_section">About</a></li>
+                        <li><a href="#portfolio_section">Portfolio</a></li>
+                        <li><a href="#team_section">Team</a></li>
+                        <li><a href="#services_section">lessons</a></li>
+                        <li><a href="#contactus_section">Contact</a></li>
+                        <li><a href="#feedBACK">Feedback</a></li>
+                    </ul>
+                </div>
+            </header>
+        <!-- SERVICES -->
+	<div class="service-swipe">	
+		<div class="diffSection" id="services_section">
+		<center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">lessons</p></center>
+		</div>
+		<a href="/subjects/Alp&No.html"><div class="s-card"><img src="images/icon/computer-courses.png"><p>Alphabet and Numbers</p></div></a>
+		<a href="https://gesture-robot.vercel.app/sign-kit/learn-sign"><div class="s-card"><img src="images/icon/online-tutorials.png"><p>Sign by BOT</p></div></a>
+	    <a href="https://gesture-robot.vercel.app/sign-kit/convert"><div class="s-card"><img src="images/icon/brainbooster.png"><p>Convert to Sign</p></div></a>
+		<!-- <a href="subjects/jee.html#sample_papers"><div class="s-card"><img src="images/icon/papers.jpg"><p>Sample Papers of Various Competitive Exams</p></div></a> -->
+		<!-- <a href=""><div class="s-card"><img src="images/icon/p3.png"><p>Emergency Signs</p></div></a> -->
+		<a href="http://127.0.0.1:5000"><div class="s-card"><img src="images/icon/discussion.png"><p>Sign Recognition</p></div></a>
+		<a href="/subjects/quiz.html"><div class="s-card"><img src="images/icon/q1.png"><p>Daily Quiz</p></div></a>
+		<!-- <a href=""><div class="s-card"><img src="images/icon/help.png"><p>24x7 Online Support</p></div></a> -->
+	</div>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="left-col">
+         
+                <div class="logo"></div>
+                <div class="social-media">
+                    <a href="#"><img src="images/icon/fb.png"></a>
+                    <a href="#"><img src="images/icon/insta.png"></a>
+                    <a href="#"><img src="images/icon/tt.png"></a>
+                    <a href="#"><img src="images/icon/ytube.png"></a>
+                    <a href="#"><img src="images/icon/linkedin.png"></a>
+                </div><br><br>
+                <p class="rights-text">Copyright © 2021 Created By Ram Ji Gupta, Sumit Kumar All Rights Reserved.</p>
+                <br><p><img src="images/icon/location.png"> Arya College of Engineering and IT. <br>Kukus, Jaipur-302028</p><br>
+                <p><img src="images/icon/phone.png"> +91-9351-870-445<br><img src="images/icon/mail.png">&nbsp; ssingh7296003817@gmail.com</p>
+            </div>
+            <div class="right-col">
+                <h1 style="color: #fff">Our Newsletter</h1>
+                <div class="border"></div><br>
+                <p>Enter Your Email to get our News and updates.</p>
+                <form class="newsletter-form">
+                    <input class="txtb" type="email" placeholder="Enter Your Email">
+                    <input class="btn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </footer>
+    
+    </body>
+    </html>
