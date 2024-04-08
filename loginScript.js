@@ -2,6 +2,7 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
   import {getDatabase, ref ,set, get, child} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js"
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+  import {getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -20,6 +21,13 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+  const auth = getAuth(app);
+
+
+  let EmailInp = document.getElementById('');
+  let PassInp = document.getElementById('');
+  let ConfInp = document.getElementById('');
+  let FullNameInp = document.getElementById('');
 
 
   //get ref to dartabase service
