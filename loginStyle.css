@@ -11,6 +11,10 @@ body {
 	display: flex;
 	justify-content: center;
 }
+
+.a-tag{
+		text-decoration: none;
+}
 .logo {
 	display: flex;
 	justify-content: center;
