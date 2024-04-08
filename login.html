@@ -51,14 +51,41 @@
 			</div>
 			
 			<!-- Registration Form -->
-			<form id="register" class="input-group">
-				<input type="text" class="input-field" id="fullname" placeholder="Full Name" required="required">
-				<input type="email" class="input-field" id="email-reg" placeholder="Email Address" required="required">
-				<input type="password" class="input-field" id="pass" placeholder="Create Password" name="psame" required="required">
-				<input type="password" class="input-field" id="pass-conf" placeholder="Confirm Password" name="psame" required="required">
-				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
-				<button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
-			</form>
+		<!-- Registration Form -->
+<form id="register" class="input-group" onsubmit="return validateRegistration()">
+    <input type="text" class="input-field" id="fullname" placeholder="Full Name" required="required">
+    <input type="email" class="input-field" id="email-reg" placeholder="Email Address" required="required">
+    <input type="password" class="input-field" id="pass" placeholder="Create Password" name="psame" required="required">
+    <input type="password" class="input-field" id="pass-conf" placeholder="Confirm Password" name="psame" required="required">
+    <input type="checkbox" class="check-box" id="chkAgree">I agree to the Terms & Conditions
+	<button type="submitr" id="btnSubmit" class="submit-btn reg-btn">Register</button>
+     
+</form>
+
+<script>
+    function validateRegistration() {
+        // Get values from input fields
+        var password = document.getElementById('pass').value;
+        var confirmPassword = document.getElementById('pass-conf').value;
+        var agreeChecked = document.getElementById('chkAgree').checked;
+
+        // Check if password and confirm password match
+        if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return false; // Prevent form submission
+        }
+
+        // Check if user agreed to terms and conditions
+        if (!agreeChecked) {
+            alert("Please agree to the Terms & Conditions");
+            return false; // Prevent form submission
+        }
+
+        // If everything is valid, allow form submission
+        return true;
+    }
+</script>
+
 		</div>
 		<script type="text/javascript" src="script.js"></script>
 
@@ -114,8 +141,11 @@
 	})
   }
 
-
-  Register.addEventListener('submit', RegisterUser);
+  
+if (validateRegistration){
+Register.addEventListener('', RegisterUser);
+}
+   
 
 
   let SignInUser = evt => {
@@ -131,7 +161,7 @@
 	})
   }
 
-  Login.addEventListener('submit', SignInUser);
+  Login.addEventListener('submitr', SignInUser);
   //get ref to dartabase service
 //   const db = getDatabase(app);
 //   document.getElementById("login-btn").addEventListener('click', function(e){
