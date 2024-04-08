@@ -64,7 +64,7 @@
 				<button type="submit" id="btnSubmit" class="submit-btn reg-btn" >Register</button>
 			</form>
 			
-			<script>
+			<!-- <script>
 				 function validateRegistration() {
 			// Get values from input fields
 			var password = document.getElementById('pass').value;
@@ -96,7 +96,7 @@
 			
 				// Initially update the button state
 				updateButton();
-			</script>
+			</script> -->
 			
 		</div>
 
@@ -169,7 +169,7 @@
 	evt.preventDefault();
 
 	signInWithEmailAndPassword(auth,EmailLogin.value,PassLogin.value).then((credentials)=>{
-		<a href="./index.html"></a>
+		window.location.href = "./index.html";
 		console.log(credentials);
 
 	}).catch((error)=>{
